@@ -1,0 +1,10 @@
+```
+At the first part of your message, always put a $ sign then type the commands you want beside it.
+
+commands:
+
+hello or hi
+fuck you
+help
+jojo
+```

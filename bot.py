@@ -2,9 +2,13 @@ import discord
 
 person = discord.Client()
 
+def help_message():
+    with open('help.txt','r') as f:
+        return f.read()
+
 @person.event
 async def on_ready():
-    print(f'Hello, {person}')
+    print(f'Hello, {person.user}')
 
 @person.event
 async def on_message(message):
@@ -14,20 +18,20 @@ async def on_message(message):
         if message.content == '$':
             await message.channel.send("What are you going to say?")
 
-        elif message.content.replace(' ','') == '$fuckyou':
+        elif message.content.replace(' ','').lower() == '$fuckyou':
             await message.channel.send(f"Fuck you, {message.author}")
 
-        elif message.content.replace(' ','') == '$help':
-            await message.channel.send("```just say hello.... (Note that Im case sensitive and don't forget to put a dollar sign at the start of your message!)\nor say jojo\nor say fuck you```")
+        elif message.content.replace(' ','').lower() == '$help':
+            await message.channel.send(help_message())
 
-        elif message.content.replace(' ','') == '$hello':
+        elif message.content.replace(' ','').lower() == '$hello' or message.content.replace(' ','').lower() == '$hi':
             await message.channel.send('Hello!')
 
-        elif message.content.replace(' ','') == '$jojo':
+        elif message.content.replace(' ','').lower() == '$jojo':
             await message.channel.send('Golden Wind!')
 
         else:
             await message.channel.send('Uh what..')
 
 
-person.run('ODI1Mjg0Mjk2ODc2ODgzOTc5.YF7r5Q.Hox33BBnhsHAHeUeMr8mGLat4yo')
+person.run('ODI1Mjg0Mjk2ODc2ODgzOTc5.YF7r5Q.MuoDTj7IfrgWf-BTtJ1h2Et6zAc')
