@@ -1,2 +1,2 @@
 # first-discord-bot
-My first ever crappy discord bot
+The first discord bot I've made.
