@@ -34,4 +34,4 @@ async def on_message(message):
             await message.channel.send('Uh what..')
 
 
-person.run('ODI1Mjg0Mjk2ODc2ODgzOTc5.YF7r5Q.MuoDTj7IfrgWf-BTtJ1h2Et6zAc')
+person.run('token')
